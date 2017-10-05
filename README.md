@@ -6,7 +6,9 @@ Data analysis (symbolic regression, binary and multi-class classification) with 
 
 http://www.mepx.org
 
-http://www.mep.cs.ubbcluj.ro
+https://mepx.github.io/
+
+https://github.com/mepx
 
 #Discussion Group:
 
