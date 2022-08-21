@@ -1,0 +1,524 @@
+<?xml version="1.0"?>
+<project>
+	<mepx_version>2022.08.20.0-beta</mepx_version>
+	<problem_description>a(n)=n if n odd, n/2 if n even
+
+0,1,1,3,2,5,3,7,4,9
+
+taken from OEIS: A026741</problem_description>
+	<algorithm>
+		<training>
+			<num_data>10</num_data>
+			<num_cols>1</num_cols>
+			<num_outputs>1</num_outputs>
+			<num_classes>0</num_classes>
+			<data_type>2</data_type>
+			<list_separator>;</list_separator>
+			<data>
+				<row>0</row>
+				<row>1</row>
+				<row>1</row>
+				<row>3</row>
+				<row>2</row>
+				<row>5</row>
+				<row>3</row>
+				<row>7</row>
+				<row>4</row>
+				<row>9</row>
+			</data>
+		</training>
+		<validation>
+			<num_data>0</num_data>
+			<num_cols>0</num_cols>
+			<num_outputs>1</num_outputs>
+			<num_classes>0</num_classes>
+			<data_type>0</data_type>
+			<list_separator>;</list_separator>
+		</validation>
+		<test>
+			<num_data>0</num_data>
+			<num_cols>0</num_cols>
+			<num_outputs>0</num_outputs>
+			<num_classes>0</num_classes>
+			<data_type>0</data_type>
+			<list_separator>;</list_separator>
+		</test>
+		<parameters>
+			<mutation_probability>0.01</mutation_probability>
+			<crossover_probability>0.9</crossover_probability>
+			<crossover_type>0</crossover_type>
+			<chromosome_length>50</chromosome_length>
+			<subpopulation_size>100</subpopulation_size>
+			<num_subpopulations>2</num_subpopulations>
+			<tournament_size>2</tournament_size>
+			<number_of_generations>100</number_of_generations>
+			<problem_type>3</problem_type>
+			<random_seed>0</random_seed>
+			<operators_probability>0.5</operators_probability>
+			<variables_probability>0.5</variables_probability>
+			<constants_probability>0</constants_probability>
+			<num_runs>30</num_runs>
+			<use_validation_data>1</use_validation_data>
+			<simplified>1</simplified>
+			<num_threads>2</num_threads>
+			<random_subset_selection_size_percent>100</random_subset_selection_size_percent>
+			<error_measure>0</error_measure>
+			<num_generations_for_which_random_subset_is_kept_fixed>1</num_generations_for_which_random_subset_is_kept_fixed>
+			<time_series_mode>1</time_series_mode>
+			<num_predictions>10</num_predictions>
+			<window_size>2</window_size>
+			<data_type>2</data_type>
+		</parameters>
+		<constants>
+			<data_type>2</data_type>
+			<type>1</type>
+			<num_automatic_constants>5</num_automatic_constants>
+			<min_interval>0</min_interval>
+			<max_interval>1</max_interval>
+			<stddev>1</stddev>
+			<evolve>1</evolve>
+			<can_evolve_outside_initial_interval>0</can_evolve_outside_initial_interval>
+			<num_user_defined_constants>0</num_user_defined_constants>
+		</constants>
+		<operators>
+			<use_addition>1</use_addition>
+			<use_subtraction>1</use_subtraction>
+			<use_multiplication>1</use_multiplication>
+			<use_division>1</use_division>
+			<use_power>0</use_power>
+			<use_sqrt>0</use_sqrt>
+			<use_exp>0</use_exp>
+			<use_pow10>0</use_pow10>
+			<use_ln>0</use_ln>
+			<use_log10>0</use_log10>
+			<use_log2>0</use_log2>
+			<use_floor>0</use_floor>
+			<use_ceil>0</use_ceil>
+			<use_abs>0</use_abs>
+			<use_inv>0</use_inv>
+			<use_neg>0</use_neg>
+			<use_x2>0</use_x2>
+			<use_min>0</use_min>
+			<use_max>0</use_max>
+			<use_not>0</use_not>
+			<use_and>0</use_and>
+			<use_or>0</use_or>
+			<use_xor>0</use_xor>
+			<use_nand>0</use_nand>
+			<use_nor>0</use_nor>
+			<use_sin>0</use_sin>
+			<use_cos>0</use_cos>
+			<use_tan>0</use_tan>
+			<use_asin>0</use_asin>
+			<use_acos>0</use_acos>
+			<use_atan>0</use_atan>
+			<use_iflz>1</use_iflz>
+			<use_ifalbcd>1</use_ifalbcd>
+			<use_if_a_or_b_cd>0</use_if_a_or_b_cd>
+			<use_if_a_xor_b_cd>0</use_if_a_xor_b_cd>
+			<use_fmod>1</use_fmod>
+		</operators>
+		<results>
+			<run>
+				<running_time>0.28983</running_time>
+				<best_training_error>0.5 0.5 0.5 0.5 0.5 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </best_training_error>
+				<average_training_error>1.42188 1.27937 1.0975 0.825 0.57125 0.5 0.485 0.48 0.47 0.4675 0.46 0.4375 0.40375 0.35625 0.27375 0.17 0.11125 0.03625 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </average_training_error>
+				<best_validation_error>-1</best_validation_error>
+				<test_error>-1</test_error>
+				<best_training_num_incorrect>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </best_training_num_incorrect>
+				<average_training_num_incorrect>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </average_training_num_incorrect>
+				<best_validation_num_incorrect>-1</best_validation_num_incorrect>
+				<test_num_incorrect>-1</test_num_incorrect>
+				<last_generation>99</last_generation>
+				<num_generations>100</num_generations>
+				<program>
+					<code_length>50</code_length>
+					<num_variables>2</num_variables>
+					<num_outputs>1</num_outputs>
+					<problem_type>3</problem_type>
+					<data_type>2</data_type>
+					<error_measure>0</error_measure>
+					<code>
+						<i>1</i>
+						<i>0</i>
+						<i>1</i>
+						<i>0</i>
+						<i>1</i>
+						<i>0</i>
+						<i>1</i>
+						<i>1</i>
+						<i>4294967264 2 7 2 4</i>
+						<i>1</i>
+						<i>1</i>
+						<i>1</i>
+						<i>4294967292 1 4 8 2</i>
+						<i>1</i>
+						<i>1</i>
+						<i>4294967271 11 2 6 7</i>
+						<i>4294967271 4 2 9 6</i>
+						<i>4294967292 4 13 2 14</i>
+						<i>4294967294 0 15 3 17</i>
+						<i>4294967293 18 10 2 15</i>
+						<i>0</i>
+						<i>0</i>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967270 1 4 22 14</i>
+						<i>4294967294 3 14 18 24</i>
+						<i>4294967293 18 14 2 15</i>
+						<i>4294967292 15 15 12 11</i>
+						<i>4294967292 2 9 19 16</i>
+						<i>4294967295 12 18 17 8</i>
+						<i>0</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967271 24 0 17 12</i>
+						<i>4294967295 27 25 6 22</i>
+						<i>4294967295 12 22 29 32</i>
+						<i>1</i>
+						<i>4294967295 5 10 29 24</i>
+						<i>4294967294 27 4 36 29</i>
+						<i>1</i>
+						<i>1</i>
+						<i>0</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967271 20 7 42 33</i>
+						<i>1</i>
+						<i>4294967294 28 18 12 14</i>
+						<i>4294967295 20 31 29 8</i>
+						<i>0</i>
+						<i>4294967295 35 17 17 34</i>
+					</code>
+					<best_genes>49 </best_genes>
+					<max_index_best_genes>49</max_index_best_genes>
+					<error>0</error>
+					<num_incorrectly_classified>0.000000</num_incorrectly_classified>
+					<binary_classification_threshold>0</binary_classification_threshold>
+					<num_constants>0</num_constants>
+					<num_classes>0</num_classes>
+				</program>
+			</run>
+			<run>
+				<running_time>0.257051</running_time>
+				<best_training_error>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </best_training_error>
+				<average_training_error>1.41688 1.32563 1.225 1.0625 0.84375 0.605625 0.46375 0.420625 0.353125 0.25 0.245 0.2425 0.225 0.21 0.1675 0.0825 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </average_training_error>
+				<best_validation_error>-1</best_validation_error>
+				<test_error>-1</test_error>
+				<best_training_num_incorrect>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </best_training_num_incorrect>
+				<average_training_num_incorrect>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </average_training_num_incorrect>
+				<best_validation_num_incorrect>-1</best_validation_num_incorrect>
+				<test_num_incorrect>-1</test_num_incorrect>
+				<last_generation>99</last_generation>
+				<num_generations>100</num_generations>
+				<program>
+					<code_length>50</code_length>
+					<num_variables>2</num_variables>
+					<num_outputs>1</num_outputs>
+					<problem_type>3</problem_type>
+					<data_type>2</data_type>
+					<error_measure>0</error_measure>
+					<code>
+						<i>1</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967295 2 0 1 1</i>
+						<i>4294967292 3 0 1 1</i>
+						<i>4294967292 3 0 1 4</i>
+						<i>4294967295 5 0 3 0</i>
+						<i>4294967293 4 3 6 3</i>
+						<i>1</i>
+						<i>1</i>
+						<i>0</i>
+						<i>4294967294 9 4 6 1</i>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967271 8 13 8 13</i>
+						<i>4294967295 12 4 14 1</i>
+						<i>4294967271 11 15 7 12</i>
+						<i>1</i>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967294 9 3 2 5</i>
+						<i>4294967294 15 3 5 12</i>
+						<i>4294967270 6 17 1 9</i>
+						<i>1</i>
+						<i>4294967271 15 8 11 1</i>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967271 8 22 3 14</i>
+						<i>0</i>
+						<i>1</i>
+						<i>0</i>
+						<i>4294967294 4 1 24 21</i>
+						<i>4294967270 8 21 28 28</i>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967295 25 10 9 25</i>
+						<i>0</i>
+						<i>4294967295 23 15 26 26</i>
+						<i>1</i>
+						<i>4294967271 22 38 22 31</i>
+						<i>1</i>
+						<i>0</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967271 40 42 24 24</i>
+						<i>1</i>
+						<i>4294967294 40 41 23 38</i>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967270 24 17 23 7</i>
+					</code>
+					<best_genes>15 </best_genes>
+					<max_index_best_genes>15</max_index_best_genes>
+					<error>0</error>
+					<num_incorrectly_classified>0.000000</num_incorrectly_classified>
+					<binary_classification_threshold>0</binary_classification_threshold>
+					<num_constants>0</num_constants>
+					<num_classes>0</num_classes>
+				</program>
+			</run>
+			<run>
+				<running_time>0.260429</running_time>
+				<best_training_error>0.5 0.375 0.375 0.375 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </best_training_error>
+				<average_training_error>1.43125 1.34625 1.18125 0.9375 0.68375 0.484375 0.46875 0.42875 0.36125 0.2725 0.218125 0.206875 0.185 0.151875 0.10375 0.045 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </average_training_error>
+				<best_validation_error>-1</best_validation_error>
+				<test_error>-1</test_error>
+				<best_training_num_incorrect>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </best_training_num_incorrect>
+				<average_training_num_incorrect>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </average_training_num_incorrect>
+				<best_validation_num_incorrect>-1</best_validation_num_incorrect>
+				<test_num_incorrect>-1</test_num_incorrect>
+				<last_generation>99</last_generation>
+				<num_generations>100</num_generations>
+				<program>
+					<code_length>50</code_length>
+					<num_variables>2</num_variables>
+					<num_outputs>1</num_outputs>
+					<problem_type>3</problem_type>
+					<data_type>2</data_type>
+					<error_measure>0</error_measure>
+					<code>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967270 0 0 1 0</i>
+						<i>4294967295 0 0 1 1</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967293 2 3 5 3</i>
+						<i>4294967271 3 3 5 5</i>
+						<i>0</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967270 4 5 7 5</i>
+						<i>4294967294 7 0 8 5</i>
+						<i>1</i>
+						<i>4294967294 4 10 1 13</i>
+						<i>4294967295 13 7 0 5</i>
+						<i>4294967294 11 2 8 5</i>
+						<i>4294967292 15 1 16 13</i>
+						<i>1</i>
+						<i>1</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967295 17 8 10 3</i>
+						<i>0</i>
+						<i>4294967295 5 15 12 14</i>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967295 19 9 13 9</i>
+						<i>4294967294 7 25 22 11</i>
+						<i>1</i>
+						<i>0</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967270 9 19 11 7</i>
+						<i>1</i>
+						<i>1</i>
+						<i>4294967271 18 15 23 11</i>
+						<i>1</i>
+						<i>1</i>
+						<i>4294967294 33 23 38 0</i>
+						<i>4294967271 22 21 13 39</i>
+						<i>0</i>
+						<i>4294967294 16 41 8 29</i>
+						<i>1</i>
+						<i>1</i>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967294 21 30 25 13</i>
+						<i>0</i>
+						<i>0</i>
+					</code>
+					<best_genes>22 </best_genes>
+					<max_index_best_genes>22</max_index_best_genes>
+					<error>0</error>
+					<num_incorrectly_classified>0.000000</num_incorrectly_classified>
+					<binary_classification_threshold>0</binary_classification_threshold>
+					<num_constants>0</num_constants>
+					<num_classes>0</num_classes>
+				</program>
+			</run>
+			<run>
+				<running_time>0.260687</running_time>
+				<best_training_error>0.5 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </best_training_error>
+				<average_training_error>1.44063 1.355 1.22562 1.06375 0.87125 0.703125 0.631875 0.566875 0.5025 0.4525 0.4275 0.37125 0.28625 0.226875 0.21875 0.199375 0.16125 0.1175 0.061875 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </average_training_error>
+				<best_validation_error>-1</best_validation_error>
+				<test_error>-1</test_error>
+				<best_training_num_incorrect>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </best_training_num_incorrect>
+				<average_training_num_incorrect>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 </average_training_num_incorrect>
+				<best_validation_num_incorrect>-1</best_validation_num_incorrect>
+				<test_num_incorrect>-1</test_num_incorrect>
+				<last_generation>99</last_generation>
+				<num_generations>100</num_generations>
+				<program>
+					<code_length>50</code_length>
+					<num_variables>2</num_variables>
+					<num_outputs>1</num_outputs>
+					<problem_type>3</problem_type>
+					<data_type>2</data_type>
+					<error_measure>0</error_measure>
+					<code>
+						<i>0</i>
+						<i>4294967271 0 0 0 0</i>
+						<i>0</i>
+						<i>1</i>
+						<i>0</i>
+						<i>0</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967271 4 6 0 1</i>
+						<i>1</i>
+						<i>4294967271 4 5 3 4</i>
+						<i>4294967270 7 1 9 8</i>
+						<i>4294967295 4 9 4 8</i>
+						<i>1</i>
+						<i>4294967271 12 13 10 0</i>
+						<i>1</i>
+						<i>1</i>
+						<i>0</i>
+						<i>4294967270 0 13 3 13</i>
+						<i>4294967270 16 3 13 4</i>
+						<i>4294967292 12 10 7 1</i>
+						<i>1</i>
+						<i>0</i>
+						<i>1</i>
+						<i>1</i>
+						<i>4294967271 11 7 20 7</i>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967295 26 20 14 3</i>
+						<i>0</i>
+						<i>4294967271 13 29 0 25</i>
+						<i>0</i>
+						<i>1</i>
+						<i>1</i>
+						<i>1</i>
+						<i>1</i>
+						<i>1</i>
+						<i>0</i>
+						<i>4294967295 21 10 37 1</i>
+						<i>4294967295 35 21 19 25</i>
+						<i>4294967294 9 4 39 26</i>
+						<i>4294967270 16 7 25 38</i>
+						<i>0</i>
+						<i>0</i>
+						<i>1</i>
+						<i>1</i>
+						<i>4294967270 40 28 33 42</i>
+						<i>0</i>
+						<i>4294967294 11 46 36 15</i>
+						<i>0</i>
+					</code>
+					<best_genes>28 </best_genes>
+					<max_index_best_genes>28</max_index_best_genes>
+					<error>0</error>
+					<num_incorrectly_classified>0.000000</num_incorrectly_classified>
+					<binary_classification_threshold>0</binary_classification_threshold>
+					<num_constants>0</num_constants>
+					<num_classes>0</num_classes>
+				</program>
+			</run>
+			<run>
+				<running_time>0.011136</running_time>
+				<best_training_error>0.5 0.5 0.5 0.5 </best_training_error>
+				<average_training_error>1.42875 1.36813 1.2425 1.06375 </average_training_error>
+				<best_validation_error>-1</best_validation_error>
+				<test_error>-1</test_error>
+				<best_training_num_incorrect>0.000000 0.000000 0.000000 0.000000 </best_training_num_incorrect>
+				<average_training_num_incorrect>0.000000 0.000000 0.000000 0.000000 </average_training_num_incorrect>
+				<best_validation_num_incorrect>-1</best_validation_num_incorrect>
+				<test_num_incorrect>-1</test_num_incorrect>
+				<last_generation>3</last_generation>
+				<num_generations>100</num_generations>
+				<program>
+					<code_length>50</code_length>
+					<num_variables>2</num_variables>
+					<num_outputs>1</num_outputs>
+					<problem_type>3</problem_type>
+					<data_type>2</data_type>
+					<error_measure>0</error_measure>
+					<code>
+						<i>0</i>
+						<i>4294967294 0 0 0 0</i>
+						<i>4294967271 1 0 0 0</i>
+						<i>4294967294 1 1 0 2</i>
+						<i>1</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967271 0 6 1 0</i>
+						<i>4294967295 0 4 5 1</i>
+						<i>4294967294 8 4 2 1</i>
+						<i>4294967295 1 9 5 3</i>
+						<i>4294967271 8 1 8 10</i>
+						<i>4294967292 8 11 8 7</i>
+						<i>4294967293 10 12 4 9</i>
+						<i>0</i>
+						<i>1</i>
+						<i>1</i>
+						<i>4294967295 6 12 4 14</i>
+						<i>0</i>
+						<i>1</i>
+						<i>4294967270 4 8 6 13</i>
+						<i>4294967270 20 12 19 19</i>
+						<i>4294967294 21 10 1 11</i>
+						<i>0</i>
+						<i>4294967294 22 18 8 1</i>
+						<i>4294967295 17 5 3 10</i>
+						<i>0</i>
+						<i>0</i>
+						<i>0</i>
+						<i>1</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967293 2 13 16 15</i>
+						<i>4294967292 32 11 8 32</i>
+						<i>1</i>
+						<i>4294967295 25 20 20 21</i>
+						<i>4294967270 8 35 11 16</i>
+						<i>4294967294 32 7 5 12</i>
+						<i>0</i>
+						<i>4294967294 30 31 7 1</i>
+						<i>1</i>
+						<i>4294967292 20 11 32 29</i>
+						<i>0</i>
+						<i>4294967293 33 5 35 13</i>
+						<i>4294967271 33 37 42 28</i>
+						<i>0</i>
+						<i>0</i>
+						<i>4294967270 8 18 3 22</i>
+						<i>0</i>
+						<i>0</i>
+					</code>
+					<best_genes>17 </best_genes>
+					<max_index_best_genes>17</max_index_best_genes>
+					<error>0.5</error>
+					<num_incorrectly_classified>0.000000</num_incorrectly_classified>
+					<binary_classification_threshold>0</binary_classification_threshold>
+					<num_constants>0</num_constants>
+					<num_classes>0</num_classes>
+				</program>
+			</run>
+		</results>
+	</algorithm>
+</project>
