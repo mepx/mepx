@@ -28,6 +28,7 @@ private:
 	void OnShow(wxShowEvent& event);
 	void on_num_classes_changed(wxSpinEvent& event);
 	bool validate_is_one_of_m(void);
+	void on_timer(wxTimerEvent&);
 
 	int answer_is_one_of_m_multi_class_classification_problem;
 	wxCheckBox* cb_is_one_of_m;
@@ -35,6 +36,7 @@ private:
 	wxSpinCtrl* sc_num_classes;
 	wxRadioBox* rb_list_separator, * rb_decimal_separator;
 
+	wxTimer* t_timer;
 public:
 	t_mep_data data;
 

@@ -9,7 +9,7 @@
 //-------------------------------------------------------------------------
 #define app_name "Multi Expression Programming X"
 #define app_name_short "MEPX"
-#define app_version_nr "2026.1.28.0"
+#define app_version_nr "2026.2.2.0"
 
 #define manufacturer_website "https://mepx.org"
 #define manufacturer_email "mihai.oltean@gmail.com"

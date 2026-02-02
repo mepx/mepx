@@ -10,6 +10,8 @@
 // ---------------------------------------------------------------------------
 t_import_data_window* f_import_data_window = NULL;
 // ---------------------------------------------------------------------------
+#define TIMER_ID 1301
+// ---------------------------------------------------------------------------
 t_import_data_window::t_import_data_window(wxWindow* parent,
 														 const wxString& title,
 														 const wxPoint& pos,
@@ -82,12 +84,17 @@ t_import_data_window::t_import_data_window(wxWindow* parent,
 
 	data_as_string = NULL;
 	file_name = "";
+
+	t_timer = new wxTimer;
+	t_timer->SetOwner(this, TIMER_ID);
+	Bind(wxEVT_TIMER, &t_import_data_window::on_timer, this);
 }
 // ---------------------------------------------------------------------------
 t_import_data_window::~t_import_data_window()
 {
 	//delete data_provider;
 	//data.clear_data();
+	delete t_timer;
 }
 // ---------------------------------------------------------------------------
 void t_import_data_window::OnOKPressed(wxCommandEvent&)
@@ -123,7 +130,7 @@ void t_import_data_window::on_separators_changed(wxCommandEvent&)
 		rb_decimal_separator->SetSelection(DECIMAL_SEPARATOR_DOT);
 	}
 	// here I process it
-	update_grid_data();
+	t_timer->StartOnce(100);
 }
 // ---------------------------------------------------------------------------
 void t_import_data_window::get_separators(char& list_separator,
@@ -196,9 +203,14 @@ void t_import_data_window::OnShow(wxShowEvent& event)
 	l_num_classes->Enable(false);
 	sc_num_classes->Enable(false);
 	
-	update_grid_data();
+	t_timer->StartOnce(300);
 }
 // ---------------------------------------------------------------------------
+void t_import_data_window::on_timer(wxTimerEvent&)
+{
+	update_grid_data();
+}
+//-------------------------------------------------------------------------
 void t_import_data_window::update_grid_data(void)
 {
 	wxWindow::SetCursor(wxCURSOR_WAIT);
